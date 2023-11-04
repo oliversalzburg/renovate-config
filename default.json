@@ -21,6 +21,10 @@
       "groupName": "eslint"
     },
     {
+      "matchPackagePatterns": ["prettier"],
+      "groupName": "prettier"
+    },
+    {
       "matchPackagePatterns": ["^@yarnpkg/"],
       "groupName": "yarn"
     }
