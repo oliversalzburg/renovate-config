@@ -11,6 +11,10 @@
       "matchDepTypes": ["devDependencies"],
       "matchPackagePatterns": ["^@types/"],
       "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint"
     }
   ],
   "pinDigests": true,
