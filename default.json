@@ -27,6 +27,12 @@
     {
       "matchPackagePatterns": ["^@yarnpkg/"],
       "groupName": "yarn"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["node"],
+      "versionCompatibility": "^(?<version>[^-]+)(?<compatibility>-.*)?$",
+      "versioning": "node"
     }
   ],
   "pinDigests": true,
