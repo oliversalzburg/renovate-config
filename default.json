@@ -9,12 +9,20 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "matchPackagePatterns": ["^@types/"],
-      "automerge": true
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchPackagePatterns": ["^convict", "^@types/convict"],
+      "groupName": "convict"
     },
     {
       "matchPackagePatterns": ["eslint"],
       "groupName": "eslint"
+    },
+    {
+      "matchPackagePatterns": ["^@yarnpkg/"],
+      "groupName": "yarn"
     }
   ],
   "pinDigests": true,
