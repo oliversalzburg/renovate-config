@@ -30,7 +30,7 @@
     },
     {
       "matchDatasources": ["docker"],
-      "matchPackageNames": ["node"],
+      "matchPackageNames": ["docker.io/library/node", "node"],
       "versionCompatibility": "^(?<version>[^-]+)(?<compatibility>-.*)?$",
       "versioning": "node"
     }
