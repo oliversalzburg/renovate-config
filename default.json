@@ -48,6 +48,10 @@
       "groupName": "eslint"
     },
     {
+      "matchPackagePatterns": ["i18next"],
+      "groupName": "i18next"
+    },
+    {
       "matchPackagePatterns": ["prettier"],
       "groupName": "prettier"
     },
