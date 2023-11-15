@@ -1,6 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", ":pinAllExceptPeerDependencies"],
+  "extends": [
+    "config:best-practices",
+    ":pinAllExceptPeerDependencies",
+    "helpers:pinGitHubActionDigests"
+  ],
 
   "branchConcurrentLimit": 0,
   "customManagers": [
