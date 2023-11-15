@@ -2,8 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
-    ":pinAllExceptPeerDependencies",
-    "helpers:pinGitHubActionDigests"
+    ":pinAllExceptPeerDependencies"
   ],
 
   "branchConcurrentLimit": 0,
@@ -68,6 +67,10 @@
       "matchPackageNames": ["docker.io/library/node", "node"],
       "versionCompatibility": "^(?<version>[^-]+)(?<compatibility>-.*)?$",
       "versioning": "node"
+    },
+    {
+      "matchPackageNames": ["python/cpython"],
+      "extractVersion": "^v(?<version>.*)$"
     },
     {
       "matchManagers": ["regex"],
