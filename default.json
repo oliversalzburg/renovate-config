@@ -6,7 +6,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [".gitlab-ci.yml$"],
+      "fileMatch": ["(^|/)\\.github/workflows/.+\\.ya?ml$", ".gitlab-ci.yml$"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*- \"(?<currentValue>.*)\"\\s"
       ],
