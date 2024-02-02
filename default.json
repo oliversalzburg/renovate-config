@@ -1,15 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices",
-    ":pinAllExceptPeerDependencies"
-  ],
+  "extends": ["config:best-practices", ":pinAllExceptPeerDependencies"],
 
   "branchConcurrentLimit": 0,
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["(^|/)\\.github/workflows/.+\\.ya?ml$", ".gitlab-ci.yml$", "Dockerfile$"],
+      "fileMatch": [
+        "(^|/)\\.github/workflows/.+\\.ya?ml$",
+        ".gitlab-ci.yml$",
+        "Dockerfile$"
+      ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*- \"(?<currentValue>.*)\"\\s",
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV VERSION_.*=\"(?<currentValue>.*)\"\\s",
@@ -40,6 +41,10 @@
     {
       "matchPackagePatterns": ["i18next"],
       "groupName": "i18next"
+    },
+    {
+      "matchPackagePatterns": ["^lit$", "^lit-"],
+      "groupName": "lit"
     },
     {
       "matchPackagePatterns": ["prettier"],
