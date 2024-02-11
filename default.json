@@ -31,7 +31,7 @@
       "automergeType": "branch"
     },
     {
-      "matchPackagePatterns": ["^actions/"],
+      "matchPackagePatterns": ["^actions/", "^aws-actions/"],
       "matchUpdateTypes": "digest",
       "automerge": true,
       "automergeType": "branch"
