@@ -31,6 +31,12 @@
       "automergeType": "branch"
     },
     {
+      "matchPackagePatterns": ["^actions/"],
+      "matchUpdateTypes": "digest",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
       "matchPackagePatterns": ["^convict", "^@types/convict"],
       "groupName": "convict"
     },
