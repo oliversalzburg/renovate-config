@@ -64,7 +64,9 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": ["docker.io/library/node", "node"],
       "versionCompatibility": "^(?<version>[^-]+)(?<compatibility>-.*)?$",
-      "versioning": "node"
+      "versioning": "node",
+      "automerge": true,
+      "automergeType": "branch"
     },
     {
       "matchPackageNames": ["python/cpython"],
