@@ -31,7 +31,7 @@
       "automergeType": "branch"
     },
     {
-      "matchPackagePatterns": ["^actions/", "^aws-actions/"],
+      "matchPackagePatterns": ["^actions/", "^aws-actions/", "^github/*"],
       "matchUpdateTypes": "digest",
       "automerge": true,
       "automergeType": "branch"
