@@ -1,0 +1,39 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>oliversalzburg/renovate-config:default",
+    ":pinAllExceptPeerDependencies"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchPackagePatterns": ["^convict", "^@types/convict"],
+      "groupName": "convict"
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "matchPackagePatterns": ["i18next"],
+      "groupName": "i18next"
+    },
+    {
+      "matchPackagePatterns": ["^lit$", "^lit-"],
+      "groupName": "lit"
+    },
+    {
+      "matchPackagePatterns": ["prettier"],
+      "groupName": "prettier"
+    },
+    {
+      "matchPackagePatterns": ["^@yarnpkg/"],
+      "groupName": "yarn"
+    }
+  ],
+  "postUpdateOptions": ["yarnDedupeHighest"]
+}

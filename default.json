@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
-    ":pinAllExceptPeerDependencies",
     "regexManagers:dockerfileVersions",
     "regexManagers:githubActionsVersions",
     "regexManagers:gitlabPipelineVersions",
@@ -16,39 +15,10 @@
   },
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
-      "automerge": true,
-      "automergeType": "branch"
-    },
-    {
       "matchPackagePatterns": ["^actions/", "^aws-actions/", "^github/*"],
       "matchUpdateTypes": "digest",
       "automerge": true,
       "automergeType": "branch"
-    },
-    {
-      "matchPackagePatterns": ["^convict", "^@types/convict"],
-      "groupName": "convict"
-    },
-    {
-      "matchPackagePatterns": ["eslint"],
-      "groupName": "eslint"
-    },
-    {
-      "matchPackagePatterns": ["i18next"],
-      "groupName": "i18next"
-    },
-    {
-      "matchPackagePatterns": ["^lit$", "^lit-"],
-      "groupName": "lit"
-    },
-    {
-      "matchPackagePatterns": ["prettier"],
-      "groupName": "prettier"
-    },
-    {
-      "matchPackagePatterns": ["^@yarnpkg/"],
-      "groupName": "yarn"
     },
     {
       "matchDatasources": ["docker"],
@@ -64,7 +34,6 @@
     }
   ],
   "pinDigests": true,
-  "postUpdateOptions": ["yarnDedupeHighest"],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 5
 }
