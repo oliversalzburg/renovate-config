@@ -61,10 +61,6 @@
     {
       "matchPackageNames": ["python/cpython"],
       "extractVersion": "^v(?<version>.*)$"
-    },
-    {
-      "matchManagers": ["regex"],
-      "pinDigests": false
     }
   ],
   "pinDigests": true,
