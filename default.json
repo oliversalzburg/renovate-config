@@ -1,27 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", ":pinAllExceptPeerDependencies"],
+  "extends": [
+    "config:best-practices",
+    ":pinAllExceptPeerDependencies",
+    "regexManagers:dockerfileVersions",
+    "regexManagers:githubActionsVersions",
+    "regexManagers:gitlabPipelineVersions",
+    "regexManagers:tfvarsVersions"
+  ],
 
   "branchConcurrentLimit": 0,
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "(^|/)\\.github/workflows/.+\\.ya?ml$",
-        "\\.gitlab-ci\\.yml$",
-        "\\.yml$",
-        "Dockerfile$"
-      ],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*- \"(?<currentValue>.*)\"\\s",
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*ENV VERSION_.*=\"(?<currentValue>.*)\"\\s",
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*VERSION_.*: \"(?<currentValue>.*)\"\\s",
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*node-version: \"(?<currentValue>.*)\"\\s",
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*terraform_version: \"(?<currentValue>.*)\"\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
-  ],
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
