@@ -7,6 +7,15 @@
     "regexManagers:gitlabPipelineVersions",
     "regexManagers:tfvarsVersions"
   ],
+  "customDatasources": {
+    "apt": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/oliversalzburg/apt-repositories/main/apt/{{packageName}}.json",
+      "format": "json",
+      "transformTemplates": [
+        "{\"releases\":[{\"version\": $$.version }]}"
+      ]
+    }
+  },
 
   "branchConcurrentLimit": 0,
   "lockFileMaintenance": {
