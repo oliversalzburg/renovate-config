@@ -10,9 +10,8 @@
   "customDatasources": {
     "apt": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/oliversalzburg/apt-repositories/main/apt/{{packageName}}.json",
-      "format": "json",
       "transformTemplates": [
-        "{\"releases\":[{\"version\": $$.version }]}"
+        "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
       ]
     }
   },
