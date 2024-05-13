@@ -23,6 +23,13 @@
   },
   "packageRules": [
     {
+      "description": "Disable unsafe pinning attempts.",
+      "enabled": false,
+      "matchDatasources": ["docker"],
+      "matchManagers": ["regex"],
+      "matchUpdateTypes": ["digest", "pinDigest"]
+    },
+    {
       "matchPackagePatterns": ["^actions/", "^aws-actions/", "^github/*"],
       "matchUpdateTypes": "digest",
       "automerge": true,
