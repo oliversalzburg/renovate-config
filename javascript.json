@@ -33,6 +33,11 @@
     {
       "matchPackagePatterns": ["^@yarnpkg/"],
       "groupName": "yarn"
+    },
+    {
+      "matchPackagePatterns": ["^@aws-sdk/"],
+      "automerge": true,
+      "automergeType": "branch"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"]
