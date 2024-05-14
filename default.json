@@ -8,8 +8,14 @@
     "regexManagers:tfvarsVersions"
   ],
   "customDatasources": {
-    "apt": {
-      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/oliversalzburg/apt-repositories/main/apt/{{packageName}}.json",
+    "apt.debian": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/debian/apt/{{packageName}}.json",
+      "transformTemplates": [
+        "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
+      ]
+    },
+    "apt.ubuntu": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/ubuntu/apt/{{packageName}}.json",
       "transformTemplates": [
         "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
       ]
