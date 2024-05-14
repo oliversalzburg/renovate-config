@@ -9,13 +9,13 @@
   ],
   "customDatasources": {
     "apt.debian": {
-      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/debian/apt/{{packageName}}.json",
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/debian/main/apt/{{packageName}}.json",
       "transformTemplates": [
         "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
       ]
     },
     "apt.ubuntu": {
-      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/ubuntu/apt/{{packageName}}.json",
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/ubuntu/main/apt/{{packageName}}.json",
       "transformTemplates": [
         "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
       ]
