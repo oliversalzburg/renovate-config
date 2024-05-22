@@ -12,15 +12,13 @@
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/debian/main/apt/{{packageName}}.json",
       "transformTemplates": [
         "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
-      ],
-      "versioning": "apt"
+      ]
     },
     "apt.ubuntu": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/ubuntu/main/apt/{{packageName}}.json",
       "transformTemplates": [
         "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$.homepage }"
-      ],
-      "versioning": "apt"
+      ]
     }
   },
 
