@@ -2,10 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
-    "regexManagers:dockerfileVersions",
-    "regexManagers:githubActionsVersions",
-    "regexManagers:gitlabPipelineVersions",
-    "regexManagers:tfvarsVersions"
+    "customManagers:dockerfileVersions",
+    "customManagers:githubActionsVersions",
+    "customManagers:gitlabPipelineVersions",
+    "customManagers:tfvarsVersions"
   ],
   "customDatasources": {
     "apt.debian": {
@@ -29,8 +29,8 @@
   },
   "packageRules": [
     {
-      "description": "Disable unsafe pinning attempts.",
-      "enabled": false,
+      "description": "Disable auto-merging unsafe pinning attempts.",
+      "automerge": false,
       "matchDatasources": ["docker"],
       "matchManagers": ["regex"],
       "matchUpdateTypes": ["digest", "pinDigest"]
