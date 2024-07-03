@@ -11,13 +11,13 @@
     "apt.debian": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/debian/main/apt/{{packageName}}.json",
       "transformTemplates": [
-        "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$[0].homepage }"
+        "{ \"releases\": [$map($, function($v){ { \"version\": $v.version } })], \"homepage\": $[0].homepage }"
       ]
     },
     "apt.ubuntu": {
       "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/apt-repositories/ubuntu/main/apt/{{packageName}}.json",
       "transformTemplates": [
-        "{\"releases\":[{\"version\": $$.version }], \"homepage\": $$[0].homepage }"
+        "{ \"releases\": [$map($, function($v){ { \"version\": $v.version } })], \"homepage\": $[0].homepage }"
       ]
     }
   },
