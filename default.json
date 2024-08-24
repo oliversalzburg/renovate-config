@@ -52,6 +52,14 @@
     {
       "matchPackageNames": ["python/cpython"],
       "extractVersion": "^v(?<version>.*)$"
+    },
+    {
+      "matchPackagePatterns": ["debian-observable"],
+      "groupName": "Debian APT Packages"
+    },
+    {
+      "matchPackagePatterns": ["ubuntu-observable"],
+      "groupName": "Ubuntu APT Packages"
     }
   ],
   "pinDigests": true,
