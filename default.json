@@ -50,6 +50,10 @@
       "automergeType": "branch"
     },
     {
+      "matchPackagePatterns": ["^node$", "docker.io/library/node", "node.js"],
+      "groupName": "Node.js"
+    },
+    {
       "matchPackageNames": ["python/cpython"],
       "extractVersion": "^v(?<version>.*)$"
     },
