@@ -64,6 +64,10 @@
     {
       "matchPackagePatterns": ["ubuntu-observable"],
       "groupName": "Ubuntu APT Packages"
+    },
+    {
+      "matchPackageNames": ["prettier"],
+      "allowedVersions": "<=3.3.3"
     }
   ],
   "pinDigests": true,
