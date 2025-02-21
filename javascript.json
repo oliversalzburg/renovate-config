@@ -15,7 +15,7 @@
       "groupName": "convict"
     },
     {
-      "matchPackagePatterns": ["eslint"],
+      "matchPackagePatterns": ["eslint", "globals"],
       "groupName": "eslint"
     },
     {
@@ -38,6 +38,10 @@
       "matchPackagePatterns": ["^@aws-sdk/"],
       "automerge": true,
       "automergeType": "branch"
+    },
+    {
+      "matchPackageNames": ["prettier"],
+      "allowedVersions": "<=3.3.3"
     }
   ],
   "postUpdateOptions": ["yarnDedupeHighest"]
