@@ -31,6 +31,10 @@
       "groupName": "prettier"
     },
     {
+      "matchPackagePatterns": ["stylelint"],
+      "groupName": "stylelint"
+    },
+    {
       "matchPackagePatterns": ["^@yarnpkg/"],
       "groupName": "yarn"
     },
